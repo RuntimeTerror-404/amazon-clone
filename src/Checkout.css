@@ -1,0 +1,24 @@
+.checkout_ad{
+    width: 100%;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    /* position: sticky; */
+}
+
+.checkout{
+    display: flex;
+    padding:20px;
+    background-color: white;
+    height: max-content;
+    /* position: sticky; */
+}
+
+.checkout_title{
+    margin-right: 10px;
+    padding: 10px;
+    border-bottom: 1px solid rgb(126, 120, 120);
+}
+
+.checkout_right{
+    /* position: sticky; */
+}

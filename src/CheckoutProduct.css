@@ -1,0 +1,23 @@
+.checkoutProduct {
+  display: flex;
+  flex-direction: row;
+  min-width: 100px;
+  height: auto;
+  width: 250px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.checkoutProduct_rating {
+  display: flex;
+}
+
+.checkoutProduct > img {
+  min-width: 100px;
+  width: 200px;
+}
+
+.checkoutProduct_info{
+    margin-left: 50px;
+}
