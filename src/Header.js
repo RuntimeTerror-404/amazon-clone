@@ -6,7 +6,9 @@ import { Link } from "react-router-dom";
 import { useStateValue } from "./StateProvider";
 
 function Header() {
-  const [{ basket }, dispatch] = useStateValue();
+  const [{ basket, user }, dispatch] = useStateValue();
+
+  const handleAuthantication = () => {};
   return (
     <div className="header">
       <Link to="/">
@@ -23,10 +25,16 @@ function Header() {
       </div>
 
       <div className="header_nav">
-        <div className="header_option">
-          <span className="header_optionLineOne">Hello Guest</span>
-          <span className="header_optionLineTwo">Sign In </span>
-        </div>
+        <Link to={!user && "/login"}>
+          <div className="header_option" onClick={handleAuthantication}>
+            <span className="header_optionLineOne">
+              Hello,{!user ? "Guest" : user.email}
+            </span>
+            <span className="header_optionLineTwo">
+              {user ? "Sign Out" : "Sign In"}{" "}
+            </span>
+          </div>
+        </Link>
 
         <div className="header_option">
           <span className="header_optionLineOne">Return</span>
